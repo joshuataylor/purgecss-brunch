@@ -1,0 +1,27 @@
+{
+  "name": "purgecss-brunch",
+  "version": "1.0.0",
+  "description": "Adds purgecss support to brunch.",
+  "author": "Jeffrey Guenther (guenther.jeffrey@gmail.com)",
+  "homepage": "https://github.com/jeffreyguenther/purgecss-brunch.git",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeffreyguenther/purgecss-brunch.git"
+  },
+  "scripts": {
+    "test": "eslint index.js && mocha"
+  },
+  "dependencies": {
+    "purgecss": "^0.21.0"
+  },
+  "devDependencies": {
+    "chai": "^3",
+    "eslint": "^3.12.2",
+    "mocha": "^3",
+    "eslint-config-brunch": "brunch/eslint-config-brunch"
+  },
+  "eslintConfig": {
+    "extends": "brunch"
+  }
+}

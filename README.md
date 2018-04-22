@@ -11,6 +11,30 @@ Or, do manual install:
 * If you want to use git version of plugin, use the GitHub URI
 `"purgecss-brunch": "jeffreyguenther/purgecss-brunch"`.
 
+### Tailwind CSS
+
+This plugin was created for use with
+[Tailwind](https://tailwindcss.com/docs/controlling-file-size#removing-unused-css-with-purgecss)
+
+Add the following plugin definition. Note this config adds a custom extractor
+to handle the special characters in class names.
+
+```
+purgecss: {
+      paths: [
+        path.resolve("../lib/hello_web/templates/**/*.html.eex")
+      ],
+      extractors: [{
+        extractor: class {
+          static extract(content) {
+            return content.match(/[A-z0-9-:\/]+/g) || [];
+          }
+        },
+        extensions: ['html', 'eex', 'js']
+      }]
+    }
+```
+
 ## License
 
 The MIT License (MIT)

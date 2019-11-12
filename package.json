@@ -13,7 +13,7 @@
     "test": "eslint index.js && mocha"
   },
   "dependencies": {
-    "purgecss": "^0.21.0"
+    "purgecss": "^1.4.1"
   },
   "devDependencies": {
     "chai": "^3",
